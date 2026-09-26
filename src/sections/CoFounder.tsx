@@ -1,19 +1,17 @@
+import modestarImage from "../assets/images/Modestar.jpg";
+
 function CoFounder() {
   return (
     <section className="bg-[#F4FAFE]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Photo placeholder */}
-          <div className="flex min-h-[360px] items-center justify-center rounded-2xl bg-[#318EC9]/10 p-8 sm:min-h-[450px]">
-            <div className="text-center">
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#318EC9]/15 text-[#318EC9]">
-                <span className="text-2xl font-bold">KM</span>
-              </div>
-
-              <p className="mt-4 text-sm font-medium text-gray-500">
-                Co-founder portrait
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl">
+            <img
+              src={modestarImage}
+              alt="Kabasinguzi Modestar, Co-Founder and Managing Director of THEHASA Foundation"
+              className="h-full min-h-[360px] w-full object-cover sm:min-h-[450px]"
+            />
           </div>
 
           {/* Quote */}

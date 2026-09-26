@@ -1,4 +1,4 @@
-import communityImage from "../assets/images/community.jpg";
+import GraduatesImage from "../assets/images/Graduates.jpg";
 
 function Story() {
   return (
@@ -50,7 +50,7 @@ function Story() {
           {/* Image */}
           <div className="overflow-hidden rounded-2xl">
             <img
-              src={communityImage}
+              src={GraduatesImage}
               alt="THEHASA community activities"
               className="h-full min-h-[350px] w-full object-cover sm:min-h-[450px]"
             />

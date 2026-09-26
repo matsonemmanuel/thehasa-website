@@ -1,4 +1,7 @@
+import thehasaLogo from "../assets/branding/thehasa-logo.png";
+
 const footerLinks = [
+  { label: "Home", href: "/home" },
   { label: "About Us", href: "/about" },
   { label: "Our Model", href: "/model" },
   { label: "Join a Course", href: "/join-a-course" },
@@ -12,9 +15,21 @@ function Footer() {
     <footer className="bg-[#163B55] text-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-14">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+
           {/* Organisation */}
           <div>
-            <h2 className="text-xl font-bold">THEHASA Foundation</h2>
+            {/* Clickable THEHASA Logo */}
+            <a
+              href="/"
+              aria-label="THEHASA Foundation home"
+              className="inline-flex items-center transition-opacity duration-200 hover:opacity-80"
+            >
+              <img
+                src={thehasaLogo}
+                alt="THEHASA Foundation"
+                className="h-40 w-auto object-contain"
+              />
+            </a>
 
             <p className="mt-4 max-w-md text-sm leading-6 text-white/80">
               A women-led community-based organisation in Kyangwali Refugee
@@ -71,10 +86,24 @@ function Footer() {
 
         {/* Bottom */}
         <div className="mt-10 border-t border-white/15 pt-6">
-          <p className="text-center text-sm text-white/60">
-            © 2026 THEHASA Foundation. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center justify-center gap-2 text-center sm:flex-row">
+            <p className="text-sm text-white/60">
+              © 2026 THEHASA Foundation. All rights reserved.
+            </p>
+
+            <span className="hidden text-white/30 sm:inline">
+              |
+            </span>
+
+            <a
+              href="https://emmanuelmatson.com"
+              className="text-sm text-white/60 transition hover:text-white"
+            >
+              Powered by Matson Labs
+            </a>
+          </div>
         </div>
+
       </div>
     </footer>
   );
