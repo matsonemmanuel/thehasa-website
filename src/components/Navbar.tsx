@@ -47,7 +47,7 @@ function Navbar() {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="rounded-lg p-2 text-gray-700 lg:hidden"
+          className="cursor-pointer rounded-lg p-2 text-gray-700 transition hover:bg-blue-50 hover:text-[#318EC9] lg:hidden"
           aria-label="Toggle navigation menu"
           aria-expanded={isOpen}
         >
