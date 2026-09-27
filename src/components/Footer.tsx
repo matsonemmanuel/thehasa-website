@@ -1,7 +1,10 @@
 import thehasaLogo from "../assets/branding/thehasa-logo.png";
+import matLabsLogo from "../assets/branding/mat-labs.png";
+import { Link } from "react-router-dom";
+
 
 const footerLinks = [
-  { label: "Home", href: "/home" },
+  { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Our Model", href: "/model" },
   { label: "Join a Course", href: "/join-a-course" },
@@ -51,13 +54,13 @@ function Footer() {
 
             <nav className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3">
               {footerLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
+                  to={link.href}
                   className="text-sm text-white/80 transition hover:text-white"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
@@ -86,7 +89,8 @@ function Footer() {
 
         {/* Bottom */}
         <div className="mt-10 border-t border-white/15 pt-6">
-          <div className="flex flex-col items-center justify-center gap-2 text-center sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-3">
+
             <p className="text-sm text-white/60">
               © 2026 THEHASA Foundation. All rights reserved.
             </p>
@@ -96,11 +100,21 @@ function Footer() {
             </span>
 
             <a
-              href="https://emmanuelmatson.com"
-              className="text-sm text-white/60 transition hover:text-white"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Powered by Mat Labs"
+              className="inline-flex items-center gap-2 text-sm text-white/60 transition hover:text-white"
             >
-              Powered by Mat Labs
+              <span>Powered by</span>
+
+              <img
+                src={matLabsLogo}
+                alt="Mat Labs"
+                className="h-7 w-auto object-contain"
+              />
             </a>
+
           </div>
         </div>
 

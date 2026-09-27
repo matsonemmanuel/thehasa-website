@@ -22,6 +22,8 @@ import WhatWeDo from "./pages/WhatWeDo";
 import NewsStories from "./pages/NewsStories";
 import PartnersSustainability from "./pages/PartnersSustainability";
 import GetInvolved from "./pages/GetInvolved";
+import JoinACourse from "./pages/JoinAcourse";
+import Contact from "./pages/Contact";
 
 function Home() {
   return (
@@ -78,9 +80,11 @@ function App() {
             element={<WhatWeDo />}
           />
 
+          <Route path="/impact" element={<NewsStories />} />
+
           <Route
             path="/impact/news-stories"
-            element={<NewsStories /> }
+            element={<NewsStories />}
           />
 
           <Route
@@ -95,12 +99,12 @@ function App() {
 
           <Route
             path="/join-a-course"
-            element={<div className="min-h-screen p-10">Join a Course</div>}
+            element={<JoinACourse />}
           />
 
           <Route
             path="/contact"
-            element={<div className="min-h-screen p-10">Contact</div>}
+            element={<Contact />}
           />
         </Routes>
       </main>
