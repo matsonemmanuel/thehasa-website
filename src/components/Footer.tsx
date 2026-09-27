@@ -99,7 +99,7 @@ function Footer() {
               href="https://emmanuelmatson.com"
               className="text-sm text-white/60 transition hover:text-white"
             >
-              Powered by Matson Labs
+              Powered by Mat Labs
             </a>
           </div>
         </div>
