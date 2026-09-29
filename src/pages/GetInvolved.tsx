@@ -7,36 +7,104 @@ import {
   FiUsers,
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import getInvolvedImage from "../assets/images/programs/Involved.jpg";
 
 export default function GetInvolved() {
   return (
     <main className="bg-white text-slate-900">
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#318EC9]">
-        <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-white/10" />
-        <div className="absolute -bottom-40 left-1/3 h-96 w-96 rounded-full bg-white/5" />
+      <section className="relative isolate min-h-[620px] overflow-hidden bg-[#318EC9] sm:min-h-[660px]">
 
-        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+        {/* Background image */}
+        <div className="absolute inset-0 -z-20">
+          <img
+            src={getInvolvedImage}
+            alt="THEHASA Foundation community"
+            className="h-full w-full object-cover object-center"
+          />
+        </div>
+
+        {/* Main blue gradient overlay */}
+        <div
+          className="
+            absolute inset-0 -z-10
+            bg-[linear-gradient(90deg,#073A68_0%,#0A4779_28%,rgba(49,142,201,0.94)_48%,rgba(49,142,201,0.62)_65%,rgba(49,142,201,0.12)_88%,rgba(49,142,201,0)_100%)]
+          "
+        />
+
+        {/* Bottom blue fade */}
+        <div
+          className="
+            absolute inset-x-0 bottom-0 -z-10 h-48
+            bg-linear-to-t
+            from-[#073A68]/80
+            via-[#073A68]/25
+            to-transparent
+          "
+        />
+
+        {/* Subtle dark overlay on the left for text readability */}
+        <div
+          className="
+            absolute inset-y-0 left-0 -z-10 w-[65%]
+            bg-linear-to-r
+            from-[#073A68]/45
+            via-[#073A68]/20
+            to-transparent
+          "
+        />
+
+        {/* Decorative blue shapes */}
+        <div className="pointer-events-none absolute -bottom-32 -left-24 -z-10 h-72 w-[65%] rotate-[-8deg] rounded-[50%] bg-[#0B4F87]/45 blur-sm" />
+
+        <div className="pointer-events-none absolute -bottom-44 left-[12%] -z-10 h-72 w-[60%] rotate-[-6deg] rounded-[50%] bg-[#318EC9]/35" />
+
+        {/* Content */}
+        <div className="relative mx-auto flex min-h-[620px] max-w-7xl items-center px-6 py-24 sm:min-h-[660px] sm:px-8 lg:px-12 lg:py-32">
+
           <div className="max-w-3xl">
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-white/80">
-              Get Involved
-            </p>
 
-            <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-              There is a place for you in this story.
+            {/* Eyebrow */}
+            <div className="mb-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/85">
+                Get Involved
+              </p>
+
+              <div className="mt-4 h-1 w-12 bg-[#ED1C24]" />
+            </div>
+
+            {/* Heading */}
+            <h1 className="max-w-3xl text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+              There is a place for you{" "}
+              <span className="text-[#9ED8FF]">
+                in this story.
+              </span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/90 sm:text-xl">
+            {/* Description */}
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-white/90 sm:text-xl">
               Whether you can fund, share your expertise, give work to a
               graduate, or simply tell someone about us, you can help a mother
               and her child move forward together.
             </p>
 
+            {/* Buttons */}
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+
               <a
                 href="#urgent-need"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-[#ED1C24] px-7 py-4 font-semibold text-white transition hover:bg-red-700"
+                className="
+                  inline-flex items-center justify-center gap-3
+                  rounded-xl
+                  bg-[#ED1C24]
+                  px-7 py-4
+                  font-semibold text-white
+                  shadow-lg shadow-black/10
+                  transition
+                  hover:bg-red-700
+                  hover:shadow-xl
+                "
               >
                 Support a Mother and Child
                 <FiArrowRight size={18} />
@@ -44,11 +112,24 @@ export default function GetInvolved() {
 
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-3 rounded-full border border-white/40 px-7 py-4 font-semibold text-white transition hover:bg-white/10"
+                className="
+                  inline-flex items-center justify-center gap-3
+                  rounded-xl
+                  border border-white/60
+                  bg-white/5
+                  px-7 py-4
+                  font-semibold text-white
+                  backdrop-blur-sm
+                  transition
+                  hover:bg-white/10
+                "
               >
                 Contact Us
+                <FiArrowRight size={18} />
               </Link>
+
             </div>
+
           </div>
         </div>
       </section>

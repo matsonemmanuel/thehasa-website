@@ -6,6 +6,7 @@ import {
   FiUsers,
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import joinCourseVideo from "../assets/videos/success.mp4";
 
 const trades = [
   "Tailoring",
@@ -40,35 +41,121 @@ export default function JoinACourse() {
     <main className="bg-white text-slate-900">
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#318EC9]">
-        <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-white/10" />
-        <div className="absolute -bottom-40 left-1/3 h-96 w-96 rounded-full bg-white/5" />
+      <section className="relative isolate min-h-[620px] overflow-hidden bg-[#318EC9] sm:min-h-[660px]">
 
-        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+        {/* Background video */}
+        <div className="absolute inset-0 -z-20">
+          <video
+            src={joinCourseVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            className="h-full w-full object-cover object-[65%_center]"
+          />
+        </div>
+
+        {/* Main blue gradient */}
+        <div
+          className="
+            absolute inset-0 -z-10
+            bg-[linear-gradient(90deg,#073A68_0%,#0A4779_28%,rgba(49,142,201,0.94)_48%,rgba(49,142,201,0.62)_65%,rgba(49,142,201,0.12)_88%,rgba(49,142,201,0)_100%)]
+          "
+        />
+
+        {/* Bottom blue fade */}
+        <div
+          className="
+            absolute inset-x-0 bottom-0 -z-10 h-48
+            bg-linear-to-t
+            from-[#073A68]/80
+            via-[#073A68]/25
+            to-transparent
+          "
+        />
+
+        {/* Additional left-side readability overlay */}
+        <div
+          className="
+            absolute inset-y-0 left-0 -z-10 w-[65%]
+            bg-linear-to-r
+            from-[#073A68]/45
+            via-[#073A68]/20
+            to-transparent
+          "
+        />
+
+        {/* Decorative blue shapes */}
+        <div
+          className="
+            pointer-events-none absolute -bottom-32 -left-24 -z-10
+            h-72 w-[65%]
+            rotate-[-8deg]
+            rounded-[50%]
+            bg-[#0B4F87]/45
+            blur-sm
+          "
+        />
+
+        <div
+          className="
+            pointer-events-none absolute -bottom-44 left-[12%] -z-10
+            h-72 w-[60%]
+            rotate-[-6deg]
+            rounded-[50%]
+            bg-[#318EC9]/35
+          "
+        />
+
+        {/* Hero content */}
+        <div className="relative mx-auto flex min-h-[620px] max-w-7xl items-center px-6 py-24 sm:min-h-[660px] sm:px-8 lg:px-12 lg:py-32">
+
           <div className="max-w-3xl">
 
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-white/80">
-              THEHASA Vocational Skills Development Centre
-            </p>
+            {/* Eyebrow */}
+            <div className="mb-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/85">
+                THEHASA Vocational Skills Development Centre
+              </p>
 
-            <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+              <div className="mt-4 h-1 w-12 bg-[#ED1C24]" />
+            </div>
+
+            {/* Heading */}
+            <h1 className="max-w-3xl text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
               Left school?
               <br />
               Have a baby?
               <br />
-              You can still learn a trade.
+              <span className="text-[#9ED8FF]">
+                You can still learn a trade.
+              </span>
             </h1>
 
+            {/* Description */}
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/90 sm:text-xl">
               At THEHASA, you learn a skill with your hands, get a national
               certificate, and learn how to earn and save from it.
             </p>
 
+            {/* Buttons */}
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
 
               <a
                 href="tel:+256770952512"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-[#ED1C24] px-7 py-4 font-semibold text-white transition hover:bg-red-700"
+                className="
+                  inline-flex items-center justify-center gap-3
+                  rounded-xl
+                  bg-[#ED1C24]
+                  px-7 py-4
+                  font-semibold text-white
+                  shadow-lg shadow-black/10
+                  transition
+                  hover:bg-red-700
+                  hover:shadow-xl
+                "
               >
                 Call Us to Enrol
                 <FiPhone size={18} />
@@ -76,7 +163,17 @@ export default function JoinACourse() {
 
               <a
                 href="#who-can-join"
-                className="inline-flex items-center justify-center gap-3 rounded-full border border-white/40 px-7 py-4 font-semibold text-white transition hover:bg-white/10"
+                className="
+                  inline-flex items-center justify-center gap-3
+                  rounded-xl
+                  border border-white/60
+                  bg-white/5
+                  px-7 py-4
+                  font-semibold text-white
+                  backdrop-blur-sm
+                  transition
+                  hover:bg-white/10
+                "
               >
                 See Who Can Join
                 <FiArrowRight size={18} />

@@ -1,4 +1,4 @@
-import childCareImage from "../assets/images/ChildCare-Sample.jpg";
+import childCareImage from "../assets/images/childcare.jpg";
 
 function WhoWillHoldTheBaby() {
   return (
