@@ -25,6 +25,8 @@ import GetInvolved from "./pages/GetInvolved";
 import JoinACourse from "./pages/JoinAcourse";
 import Contact from "./pages/Contact";
 
+import FloatingContact from "./components/FloatingContact";
+
 function Home() {
   return (
     <>
@@ -110,6 +112,8 @@ function App() {
       </main>
 
       <Footer />
+
+      <FloatingContact />
     </div>
   );
 }
