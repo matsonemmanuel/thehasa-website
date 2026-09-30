@@ -9,7 +9,7 @@ const footerLinks = [
   { label: "Our Model", href: "/model" },
   { label: "Join a Course", href: "/join-a-course" },
   { label: "Get Involved", href: "/get-involved" },
-  { label: "Sources", href: "/sources" },
+  
   { label: "Contact", href: "/contact" },
 ];
 

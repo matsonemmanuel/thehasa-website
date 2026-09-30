@@ -1,7 +1,20 @@
+import bishopStuartLogo from "../assets/branding/partners/Bishop.png";
+import alightLogo from "../assets/branding/partners/Alight.png";
+import elecuLogo from "../assets/branding/partners/Elecu.png";
+
 const partners = [
-  "Bishop Stuart University",
-  "Alight",
-  "ELECU",
+  {
+    name: "Bishop Stuart University",
+    logo: bishopStuartLogo,
+  },
+  {
+    name: "Alight",
+    logo: alightLogo,
+  },
+  {
+    name: "ELECU",
+    logo: elecuLogo,
+  },
 ];
 
 function Partners() {
@@ -30,12 +43,16 @@ function Partners() {
           <div className="partners-track flex w-max">
             {[...partners, ...partners].map((partner, index) => (
               <div
-                key={`${partner}-${index}`}
-                className="mx-3 flex h-28 w-[280px] shrink-0 items-center justify-center rounded-2xl border border-gray-100 bg-[#F4FAFE] px-6 text-center sm:w-[360px] lg:w-[400px]"
+                key={`${partner.name}-${index}`}
+                className="mx-3 flex h-28 w-[280px] shrink-0 items-center justify-center rounded-2xl border border-gray-100 bg-[#F4FAFE] px-6 text-center transition duration-300 hover:border-[#318EC9]/20 hover:shadow-md sm:w-[360px] lg:w-[400px]"
               >
-                <p className="text-lg font-semibold text-gray-800">
-                  {partner}
-                </p>
+                <div className="flex h-20 w-full items-center justify-center">
+                  <img
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    className="max-h-16 w-auto max-w-[190px] object-contain"
+                  />
+                </div>
               </div>
             ))}
           </div>
