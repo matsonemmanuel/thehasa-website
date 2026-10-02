@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import trainingImage from "../assets/images/Training.jpg";
 import motherChildImage from "../assets/images/ChildCare-Sample.jpg";
 import communityImage from "../assets/images/community.jpg";
+import { Link } from "react-router-dom";
 
 interface HeroSlide {
   image: string;
@@ -106,19 +107,19 @@ function Hero() {
               </p>
 
               <div className="mt-9 flex flex-wrap gap-4">
-                <a
-                  href="/model"
+                <Link
+                  to="/model"
                   className="rounded-lg bg-[#318EC9] px-6 py-3.5 font-semibold text-white transition hover:bg-white hover:text-[#318EC9]"
                 >
                   See How Our Model Works
-                </a>
+                </Link>
 
-                <a
-                  href="/get-involved"
+                <Link
+                  to="/get-involved"
                   className="rounded-lg bg-[#ED1C24] px-6 py-3.5 font-semibold text-white transition hover:opacity-90"
                 >
                   Support a Mother and Child
-                </a>
+                </Link>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -220,19 +221,19 @@ function Hero() {
           </AnimatePresence>
 
           <div className="mt-6 flex flex-col gap-3">
-            <a
-              href="/model"
+            <Link
+              to="/model"
               className="rounded-lg bg-[#318EC9] px-5 py-3.5 text-center font-semibold text-white"
             >
               See How Our Model Works
-            </a>
+            </Link>
 
-            <a
-              href="/get-involved"
+            <Link
+              to="/get-involved"
               className="rounded-lg bg-[#ED1C24] px-5 py-3.5 text-center font-semibold text-white"
             >
               Support a Mother and Child
-            </a>
+            </Link>
           </div>
 
           {/* Indicators */}
