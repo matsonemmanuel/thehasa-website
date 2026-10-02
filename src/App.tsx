@@ -26,6 +26,7 @@ import JoinACourse from "./pages/JoinAcourse";
 import Contact from "./pages/Contact";
 
 import FloatingContact from "./components/FloatingContact";
+import ScrollToTop from "./components/ScrollToTop";
 
 function Home() {
   return (
@@ -48,6 +49,7 @@ function Home() {
 function App() {
   return (
     <div className="min-h-screen bg-white">
+      <ScrollToTop />
       <Navbar />
 
       <main>
