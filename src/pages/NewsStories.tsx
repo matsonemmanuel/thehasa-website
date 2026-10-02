@@ -6,7 +6,38 @@ import {
   FiCalendar,
   FiScissors,
   FiUsers,
+  FiPlay,
+  FiVideo,
 } from "react-icons/fi";
+
+
+const successStories = [
+  {
+    title: "A Journey of Transformation",
+    category: "Success Story",
+    description:
+      "A story from the THEHASA community highlighting the journey from learning towards new opportunities.",
+    video: "/videos/success.mp4",
+    poster: "/images/success-poster.png",
+  },
+  {
+    title: "Skills That Create Opportunity",
+    category: "Learner Story",
+    description:
+      "Discover how practical skills can help young people build confidence, independence and a pathway forward.",
+    video: "/videos/success.mp4",
+    poster: "/images/success-poster.png",
+  },
+  {
+    title: "From Learning to Possibility",
+    category: "Community Story",
+    description:
+      "A glimpse into the people and journeys at the heart of THEHASA's work in Kyangwali.",
+    video: "/videos/success.mp4",
+    poster: "/images/success-poster.png",
+  },
+];
+
 
 function NewsStories() {
   const stories = [
@@ -218,6 +249,87 @@ function NewsStories() {
           </div>
         </div>
       </section>
+
+     {/* Success Stories */}
+<section className="bg-white px-6 py-20 lg:px-8 lg:py-28">
+  <div className="mx-auto max-w-7xl">
+    {/* Section heading */}
+    <div className="mx-auto max-w-3xl text-center">
+      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#318EC9]/10 text-[#318EC9]">
+        <FiVideo className="h-7 w-7" />
+      </div>
+
+      <p className="mt-6 text-sm font-semibold uppercase tracking-[0.28em] text-[#318EC9]">
+        Success Stories
+      </p>
+
+      <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+        Real people. Real journeys. Real change.
+      </h2>
+
+      <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+        Go beyond the numbers and hear directly from the people whose
+        journeys are at the heart of THEHASA's work.
+      </p>
+    </div>
+
+    {/* Video cards */}
+    <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {successStories.map((story, index) => (
+        <article
+          key={`${story.title}-${index}`}
+          className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div className="relative aspect-video overflow-hidden bg-slate-950">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster={story.poster}
+              className="h-full w-full object-cover"
+            >
+              <source src={story.video} type="video/mp4" />
+              Your browser does not support the video element.
+            </video>
+            {/* Story number */}
+            <div className="pointer-events-none absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#318EC9] text-sm font-bold text-white shadow-lg">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="p-7">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#318EC9]">
+              {story.category}
+            </p>
+
+            <h3 className="mt-3 text-xl font-bold leading-snug text-slate-900">
+              {story.title}
+            </h3>
+
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              {story.description}
+            </p>
+
+            <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#318EC9]">
+              <FiPlay className="h-4 w-4" />
+              Watch story
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    {/* Bottom message */}
+    <div className="mx-auto mt-14 max-w-4xl rounded-2xl bg-[#F4FAFE] px-6 py-7 text-center sm:px-8">
+      <p className="text-sm leading-7 text-slate-600 sm:text-base">
+        Every story represents a person, a family and a community moving
+        forward through skills, protection and opportunity.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Coming stories */}
       <section className="bg-white px-6 py-20 lg:px-8 lg:py-24">

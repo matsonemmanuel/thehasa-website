@@ -3,14 +3,7 @@ import { NavLink, Link, useLocation } from "react-router-dom";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import Logo from "./Logo";
 
-const mainNavLinks = [
-  { label: "Home", href: "/" },
-  { label: "Our Model", href: "/model" },
-  { label: "What We Do", href: "/what-we-do" },
-  { label: "Get Involved", href: "/get-involved" },
-  { label: "Join a Course", href: "/join-a-course" },
-  { label: "Contact", href: "/contact" },
-];
+
 
 const aboutLinks = [
   { label: "Our Story", href: "/about/our-story" },
