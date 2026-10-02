@@ -22,17 +22,14 @@ function Footer() {
           {/* Organisation */}
           <div>
             {/* Clickable THEHASA Logo */}
-            <a
-              href="/"
-              aria-label="THEHASA Foundation home"
-              className="inline-flex items-center transition-opacity duration-200 hover:opacity-80"
-            >
+            <Link to="/">
               <img
                 src={thehasaLogo}
                 alt="THEHASA Foundation"
-                className="h-40 w-auto object-contain"
+                aria-label="THEHASA Foundation home"
+                className="h-40 w-auto object-contain transition-opacity duration-200 hover:opacity-80"
               />
-            </a>
+            </Link>
 
             <p className="mt-4 max-w-md text-sm leading-6 text-white/80">
               A women-led community-based organisation in Kyangwali Refugee

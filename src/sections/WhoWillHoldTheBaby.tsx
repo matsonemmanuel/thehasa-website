@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import childCareImage from "../assets/images/childcare.jpg";
 
 function WhoWillHoldTheBaby() {
@@ -35,15 +36,15 @@ function WhoWillHoldTheBaby() {
               We built THEHASA around that question.
             </p>
 
-            <a
-              href="/who-we-serve"
+            <Link
+              to="/who-we-serve"
               className="mt-8 inline-flex items-center font-semibold text-[#318EC9] transition hover:text-[#ED1C24]"
             >
               Why young people are left behind, and how we respond
               <span className="ml-2" aria-hidden="true">
                 →
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

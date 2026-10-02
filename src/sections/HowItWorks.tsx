@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   FiScissors,
   FiBookOpen,
@@ -75,15 +76,15 @@ function HowItWorks() {
 
         {/* Link */}
         <div className="mt-10 text-center">
-          <a
-            href="/model"
+          <Link
+            to="/model"
             className="inline-flex items-center font-semibold text-[#318EC9] transition hover:text-[#ED1C24]"
           >
             See the full two-generation model
             <span className="ml-2" aria-hidden="true">
               →
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

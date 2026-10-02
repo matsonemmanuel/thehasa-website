@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Founders from "./Founders";
 
 function OurStory() {
@@ -276,13 +277,13 @@ function OurStory() {
       {/* Continue */}
       <div className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-12 text-center sm:px-6 lg:px-8">
-          <a
-            href="#founders"
+          <Link
+           to="/founders"
             className="inline-flex items-center gap-2 font-semibold text-[#318EC9] transition hover:text-[#ED1C24]"
           >
             Meet the founders behind the work
             <span aria-hidden="true">→</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

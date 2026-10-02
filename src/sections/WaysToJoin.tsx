@@ -1,4 +1,5 @@
 import { FiHeart, FiUsers, FiShare2 } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const ways = [
   {
@@ -70,15 +71,16 @@ function WaysToJoin() {
 
         {/* CTA */}
         <div className="mt-10 text-center">
-          <a
-            href="/get-involved"
+          <Link
+            to="/get-involved"
+            
             className="inline-flex items-center rounded-lg bg-[#ED1C24] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
           >
             Find Your Way In
             <span className="ml-2" aria-hidden="true">
               →
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

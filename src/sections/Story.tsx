@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import GraduatesImage from "../assets/images/Graduates.jpg";
 
 function Story() {
@@ -36,15 +37,15 @@ function Story() {
               </p>
             </div>
 
-            <a
-              href="/impact"
+            <Link
+            to="/impact"
               className="mt-8 inline-flex items-center font-semibold text-[#318EC9] transition hover:text-[#ED1C24]"
             >
               Read more results and stories
               <span className="ml-2" aria-hidden="true">
                 →
               </span>
-            </a>
+            </Link>
           </div>
 
           {/* Image */}

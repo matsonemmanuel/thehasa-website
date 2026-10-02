@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function ChildcarePriority() {
   return (
     <section className="bg-[#EAF6FC]">
@@ -29,15 +31,15 @@ function ChildcarePriority() {
             </p>
           </div>
 
-          <a
-            href="/get-involved"
+          <Link
+            to="/get-involved"
             className="mt-8 inline-flex items-center rounded-lg bg-[#ED1C24] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
           >
             Help Make Childcare Permanent
             <span className="ml-2" aria-hidden="true">
               →
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

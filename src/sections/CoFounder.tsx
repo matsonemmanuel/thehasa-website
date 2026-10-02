@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import modestarImage from "../assets/images/Modestar.jpg";
 
 function CoFounder() {
@@ -37,15 +38,15 @@ function CoFounder() {
               </p>
             </div>
 
-            <a
-              href="/about"
+            <Link
+              to="/about"
               className="mt-8 inline-flex items-center font-semibold text-[#318EC9] transition hover:text-[#ED1C24]"
             >
               Read our story
               <span className="ml-2" aria-hidden="true">
                 →
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
