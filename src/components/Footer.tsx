@@ -1,5 +1,5 @@
 import thehasaLogo from "../assets/branding/thehasa-logo.png";
-import matLabsLogo from "../assets/branding/mat-labs.png";
+import matLabsLogo from "../assets/branding/mat.png";
 import { Link } from "react-router-dom";
 
 
