@@ -263,6 +263,15 @@ function Navbar() {
           </Link>
         </div>
 
+        {/* Mobile Donate CTA */}
+        <Link
+          to="/get-involved"
+          onClick={() => setIsOpen(false)}
+          className="mr-2 rounded-md bg-[#ED1C24] px-3 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-red-700 lg:hidden"
+        >
+          Donate Today
+        </Link>
+
         {/* Mobile Menu Button */}
         <button
           type="button"
