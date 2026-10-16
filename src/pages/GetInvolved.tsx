@@ -38,7 +38,7 @@ export default function GetInvolved() {
           className="
             absolute inset-x-0 bottom-0 -z-10 h-48
             bg-linear-to-t
-            from-[#073A68]/80
+            from-[#073A68]/50
             via-[#073A68]/25
             to-transparent
           "

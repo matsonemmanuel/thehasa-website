@@ -3,7 +3,7 @@ import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { AnimatePresence, motion } from "motion/react";
 
 import trainingImage from "../assets/images/Training.jpg";
-import motherChildImage from "../assets/images/ChildCare-Sample.jpg";
+import motherChildImage from "../assets/images/programs/child.jpg";
 import communityImage from "../assets/images/community.jpg";
 import { Link } from "react-router-dom";
 
@@ -81,7 +81,7 @@ function Hero() {
         </AnimatePresence>
 
         {/* Dark blue overlay */}
-        <div className="absolute inset-0 bg-[#073b5c]/75" />
+        <div className="absolute inset-0 bg-[#073b5c]/45" />
 
         {/* Content */}
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-88px)] max-w-7xl items-center px-6 py-20 lg:px-8">

@@ -5,7 +5,7 @@ import {
   FiPhone,
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import contactHeroImage from "../assets/images/programs/Tailoring.jpg";
+import contactHeroImage from "../assets/images/programs/contact.jpg";
 
 const interests = [
   "Funding",
@@ -34,7 +34,7 @@ export default function Contact() {
         </div>
 
         {/* Simple overlay — no gradient */}
-        <div className="absolute inset-0 -z-10 bg-[#073A68]/65" />
+        <div className="absolute inset-0 -z-10 bg-[#073A68]/45" />
 
         {/* Content */}
         <div className="relative mx-auto flex min-h-[560px] max-w-7xl items-center px-6 py-24 sm:min-h-[620px] sm:px-8 lg:px-12 lg:py-28">

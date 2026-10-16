@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import GraduatesImage from "../assets/images/Graduates.jpg";
+import GraduatesImage from "../assets/images/seven.jpg";
 
 function Story() {
   return (
