@@ -55,3 +55,35 @@ a {
     animation: none;
   }
 }
+
+/* THEHASA Announcement Marquee */
+
+.thehasa-marquee {
+  position: relative;
+  width: 100%;
+}
+
+.thehasa-marquee-track {
+  animation: thehasa-scroll 38s linear infinite;
+  will-change: transform;
+}
+
+.thehasa-marquee:hover .thehasa-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes thehasa-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thehasa-marquee-track {
+    animation: none;
+  }
+}

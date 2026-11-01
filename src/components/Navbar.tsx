@@ -30,6 +30,15 @@ const navLinksAfterImpact = [
   { label: "Contact", href: "/contact" },
 ];
 
+const tickerMessages = [
+  "EMPOWERING YOUTH",
+  "PROTECTING CHILDREN",
+  "TRANSFORMING COMMUNITIES",
+  "BUILDING DIGNITY, RESILIENCE & OPPORTUNITY",
+  "SKILLS FOR TODAY. OPPORTUNITIES FOR TOMORROW.",
+  "ONE FAMILY. TWO PATHWAYS. A BRIGHTER FUTURE.",
+];
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
@@ -42,7 +51,40 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+
+      {/* THEHASA Announcement Strip */}
+      <div
+        className="thehasa-marquee flex h-8 items-center overflow-hidden bg-[#318EC9] text-white"
+        aria-label="THEHASA Foundation announcements"
+      >
+        <div className="thehasa-marquee-track flex w-max items-center">
+
+          {[0, 1].map((copy) => (
+            <div
+              key={copy}
+              className="flex shrink-0 items-center gap-7 whitespace-nowrap px-4"
+              aria-hidden={copy === 1}
+            >
+              {tickerMessages.map((message, index) => (
+                <div
+                  key={`${copy}-${index}`}
+                  className="flex items-center gap-7"
+                >
+                  <span className="text-[10px] font-bold tracking-[0.16em] sm:text-[11px]">
+                    {message}
+                  </span>
+
+                  <span className="text-[#ED1C24] text-sm">✦</span>
+                </div>
+              ))}
+            </div>
+          ))}
+
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className="mx-auto flex min-h-[72px] max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
 
         {/* Logo */}
         <Link
@@ -54,7 +96,7 @@ function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center gap-5 lg:flex xl:gap-6">
 
           {/* Home */}
           <NavLink
@@ -257,7 +299,7 @@ function Navbar() {
           {/* Primary CTA */}
           <Link
             to="/get-involved"
-            className="rounded-lg bg-[#ED1C24] px-5 py-3 text-sm font-semibold text-white transition hover:bg-red-700"
+            className="whitespace-nowrap rounded-lg bg-[#ED1C24] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-red-700"
           >
             Support a Mother and Child
           </Link>
