@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function OurModel() {
   const motherSteps = [
     {
@@ -518,12 +520,12 @@ function OurModel() {
           </p>
 
           <div className="mt-8">
-            <a
-              href="/what-we-do"
+            <Link
+              to="/what-we-do"
               className="inline-flex items-center rounded-lg bg-[#ED1C24] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#d71920]"
             >
               See What We Do
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -266,7 +266,7 @@ export default function WhatWeDo() {
     </div>
 
     {/* DARK BLUE OVERLAY */}
-    <div className="absolute inset-0 bg-[#061C2E]/55" />
+    <div className="absolute inset-0 bg-[#061C2E]/25" />
 
     {/* LEFT-TO-RIGHT GRADIENT */}
     <div className="absolute inset-0 bg-gradient-to-r from-[#061C2E]/95 via-[#061C2E]/70 to-[#061C2E]/20" />
