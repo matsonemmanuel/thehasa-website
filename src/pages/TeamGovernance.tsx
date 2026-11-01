@@ -23,13 +23,13 @@ function TeamGovernance() {
       bio: null,
     },
     {
-      name: "[Full name]",
+      name: "Shulamite Angoa Basomboli",
       role: "Director of Programmes and Academic Registrar",
       image: null,
       bio: null,
     },
     {
-      name: "Josephine [surname]",
+      name: "Josephine Manishimwe",
       role: "Director of Operations and Services",
       image: Josephine,
       bio: null,
@@ -63,7 +63,7 @@ function TeamGovernance() {
 const trainerProfiles = [
   {
     id: "hairdressing",
-    name: "Shukuru Florence",
+    name: "Riziki Maritanse",
     role: "Hairdressing Trainer",
     image: shukuru,
     description:
@@ -71,7 +71,7 @@ const trainerProfiles = [
   },
   {
     id: "trainer-2",
-    name: "Trainer Name",
+    name: "Fred Nalija",
     role: "Vocational Trainer",
     image: mechanic,
     description:
@@ -79,7 +79,7 @@ const trainerProfiles = [
   },
   {
     id: "trainer-3",
-    name: "Trainer Name",
+    name: "Hadijha Bukokeye",
     role: "Tailoring Trainer",
     image: hadija,
     description:
@@ -87,7 +87,7 @@ const trainerProfiles = [
   },
   {
     id: "trainer-4",
-    name: "Prosper [surname]",
+    name: "Prosper Irakoze",
     role: "Computer Applications Trainer",
     image: prosper,
     description:
