@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
-import Logo from "./Logo";
+import THEHASAlogo from "../assets/branding/thehasalogo.jpg";
 
 
 
@@ -84,15 +84,18 @@ function Navbar() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="mx-auto flex min-h-[72px] max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex min-h-[82px] max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8">
 
-        {/* Logo */}
         <Link
           to="/"
           aria-label="THEHASA Foundation home"
-          className="shrink-0"
+          className="flex shrink-0 items-center"
         >
-          <Logo />
+          <img
+            src={THEHASAlogo}
+            alt="THEHASA Foundation"
+            className="h-14 w-auto object-contain sm:h-16"
+          />
         </Link>
 
         {/* Desktop Navigation */}
