@@ -18,7 +18,7 @@ import contactHeroImage from "../assets/images/programs/contact.jpg";
 
 const CONTACT_EMAIL = "thehasafoundation@gmail.com";
 const CONTACT_PHONE = "+256 770 952 512";
-const WHATSAPP_NUMBER = "256770952512";
+const WHATSAPP_NUMBER = "+256393103992";
 
 const googleMapsUrl =
   "https://www.google.com/maps/search/?api=1&query=THEHASA+Foundation%2C+Block+30%2C+Kasonga+Village%2C+Kyangwali+Refugee+Settlement%2C+Kikuube+District%2C+Uganda";
