@@ -12,7 +12,7 @@ const contactOptions = [
   {
     label: "WhatsApp",
     description: "Chat with us",
-    href: "https://wa.me/256770952512?text=Hello%20THEHASA%20Foundation%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20programmes.",
+    href: "https://wa.me/256794292318?text=Hello%20THEHASA%20Foundation%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20programmes.",
     icon: FiMessageCircle,
     type: "external",
     className: "bg-[#25D366] hover:bg-[#20bd5a]",
