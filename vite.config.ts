@@ -4,9 +4,5 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   base: "/thehasa-website/",
-
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
+  plugins: [react(), tailwindcss()],
 });
