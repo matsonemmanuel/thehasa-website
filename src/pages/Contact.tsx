@@ -471,7 +471,7 @@ Thank you.
                     rows={6}
                     placeholder="Tell us how you would like to connect with THEHASA..."
                     required
-                    className="w-full resize-y rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none transition placeholder:text-slate-400 focus:border-[#318EC9] focus:ring-2 focus:ring-[#318EC9]/10"
+                    className="w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none transition placeholder:text-slate-400 focus:border-[#318EC9] focus:ring-2 focus:ring-[#318EC9]/10"
                   />
                 </div>
 
