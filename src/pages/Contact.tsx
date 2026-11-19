@@ -757,7 +757,7 @@ Thank you.
           <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
 
             <a
-              href="tel:0393103992"
+              href="tel:+256770952512"
               className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#ED1C24] px-7 py-4 font-bold text-white transition hover:-translate-y-1 hover:bg-red-700"
             >
               Call {CONTACT_PHONE}
