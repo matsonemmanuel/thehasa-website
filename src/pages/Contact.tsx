@@ -749,7 +749,7 @@ Thank you.
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
-            THEHASA is based in Kyangwali Refugee Settlement,
+            THEHASA Foundation is based in Kyangwali Refugee Settlement,
             Kikuube District, Uganda. We would be glad to connect
             with you.
           </p>
