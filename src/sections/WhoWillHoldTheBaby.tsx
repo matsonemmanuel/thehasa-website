@@ -37,7 +37,7 @@ function WhoWillHoldTheBaby() {
             </p>
 
             <Link
-              to="/who-we-serve"
+              to="/about/who-we-serve"
               className="mt-8 inline-flex items-center font-semibold text-[#318EC9] transition hover:text-[#ED1C24]"
             >
               Why young people are left behind, and how we respond

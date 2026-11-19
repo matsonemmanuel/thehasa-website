@@ -571,7 +571,7 @@ export default function JoinACourse() {
 </section>
 
 {/* WHO CAN JOIN */}
-<section className="bg-slate-50">
+<section id="who-can-join" className="bg-slate-50 scroll-mt-24">
   <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
     <div className="max-w-3xl">
       <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#318EC9]">

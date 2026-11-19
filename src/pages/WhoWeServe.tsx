@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function WhoWeServe() {
   const people = [
     {
@@ -229,12 +231,12 @@ function WhoWeServe() {
           </p>
 
           <div className="mt-10">
-            <a
-              href="/model"
+            <Link
+              to="/model"
               className="inline-flex items-center rounded-lg bg-[#318EC9] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#287caf]"
             >
               See Our Two-Generation Model
-            </a>
+            </Link>
           </div>
         </div>
       </section>
