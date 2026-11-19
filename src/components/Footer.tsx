@@ -78,7 +78,7 @@ function Footer() {
             <p className="mt-5 text-sm text-white/80">
               Safeguarding and whistleblowing:{" "}
               <span className="text-white/60">
-                confidential contact to be confirmed
+                0393 103 992 | +256 770 952 512 
               </span>
             </p>
           </div>
