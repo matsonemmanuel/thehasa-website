@@ -38,7 +38,7 @@ function Story() {
             </div>
 
             <Link
-            to="/impact"
+              to="/impact"
               className="mt-8 inline-flex items-center font-semibold text-[#318EC9] transition hover:text-[#ED1C24]"
             >
               Read more results and stories
@@ -48,12 +48,12 @@ function Story() {
             </Link>
           </div>
 
-          {/* Image */}
+          {/* Image - no cropping */}
           <div className="overflow-hidden rounded-2xl">
             <img
               src={GraduatesImage}
-              alt="THEHASA community activities"
-              className="h-full min-h-[350px] w-full object-cover sm:min-h-[450px]"
+              alt="THEHASA graduates holding their business registration certificates"
+              className="block h-auto w-full object-contain"
             />
           </div>
         </div>
