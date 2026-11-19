@@ -1,246 +1,239 @@
-import {
-  FiArrowRight,
-  FiAward,
-  FiBookOpen,
-  FiBriefcase,
-  FiCalendar,
-  FiScissors,
-  FiUsers,
-  FiPlay,
-  FiVideo,
-} from "react-icons/fi";
 
+import { useState } from "react";
 
-const successStories = [
-  {
-    title: "A Journey of Transformation",
-    category: "Success Story",
-    description:
-      "A story from the THEHASA community highlighting the journey from learning towards new opportunities.",
-    video: "/videos/success.mp4",
-    poster: "/images/success-poster.png",
-  },
-  {
-    title: "Skills That Create Opportunity",
-    category: "Learner Story",
-    description:
-      "Discover how practical skills can help young people build confidence, independence and a pathway forward.",
-    video: "/videos/success.mp4",
-    poster: "/images/success-poster.png",
-  },
-  {
-    title: "From Learning to Possibility",
-    category: "Community Story",
-    description:
-      "A glimpse into the people and journeys at the heart of THEHASA's work in Kyangwali.",
-    video: "/videos/success.mp4",
-    poster: "/images/success-poster.png",
-  },
-];
+const BASE = import.meta.env.BASE_URL;
 
+type IconProps = { size?: number; className?: string };
+
+function ArrowRight({ size = 24, className }: IconProps) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>;
+}
+
+function Play({ size = 24, className }: IconProps) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3" /></svg>;
+}
+
+function Video({ size = 24, className }: IconProps) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><path d="m22 8-6 4 6 4V8Z" /><rect x="2" y="6" width="14" height="12" rx="2" /></svg>;
+}
+
+function Users({ size = 24, className }: IconProps) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="10" cy="7" r="4" /><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg>;
+}
+
+function GraduationCap({ size = 24, className }: IconProps) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><path d="m22 10-10-5L2 10l10 5 10-5Z" /><path d="M6 12v5c3.33 2.67 8.67 2.67 12 0v-5" /><path d="M22 10v6" /></svg>;
+}
+
+function Heart({ size = 24, className }: IconProps) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" /></svg>;
+}
 
 function NewsStories() {
+  const [videoError, setVideoError] = useState(false);
+
   const stories = [
     {
-      title: "THEHASA Foundation is incorporated by URSB",
-      date: "18 May 2026",
-      category: "Milestone",
-      icon: FiAward,
+      number: "01",
+      category: "Success Story",
+      title: "A Journey of Transformation",
       description:
-        "THEHASA Foundation was incorporated by the Uganda Registration Services Bureau, marking an important step in establishing the Foundation as an independent, women-led organisation rooted in Kyangwali.",
+        "A story from the THEHASA community highlighting the journey from learning practical skills to building confidence and independence.",
+      icon: GraduationCap,
     },
     {
-      title: "247 learners sit their UVTAB assessments",
-      date: "March 2026",
-      category: "Skills & Certification",
-      icon: FiBookOpen,
+      number: "02",
+      category: "Learner Story",
+      title: "Skills That Create Opportunity",
       description:
-        "In Cohort IV, 247 learners were assessed by the Uganda Vocational and Technical Assessment Board as part of the Foundation's pathway from practical training to recognised certification.",
+        "Discover how practical vocational training can help young people develop skills, pursue opportunities and shape a more independent future.",
+      icon: Users,
     },
     {
-      title: "Seven graduates. Seven registered businesses.",
-      date: "Start-up Pilot",
-      category: "Enterprise",
-      icon: FiBriefcase,
+      number: "03",
+      category: "Community Story",
+      title: "From Learning to Possibility",
       description:
-        "Seven graduates moved from training into business ownership through a start-up pilot that combined employment, start-up materials, earnings and gradual transfer of the businesses to the graduates.",
-    },
-    {
-      title: "Our Managing Director joins the African Leadership Academy fellowship",
-      date: "Cohort 6",
-      category: "Leadership",
-      icon: FiUsers,
-      description:
-        "Kabasinguzi Modestar, Co-Founder and Managing Director of THEHASA Foundation, joined the African Leadership Academy AL for Education Fellowship, Cohort 6.",
-    },
-    {
-      title: "Inside the hairdressing class",
-      date: "Training at THEHASA",
-      category: "Learner Stories",
-      icon: FiScissors,
-      description:
-        "A closer look at a day in the hairdressing class, showing learners developing practical skills that can become a source of income and independence.",
+        "A glimpse into the people, experiences and community journeys at the heart of THEHASA Foundation's work.",
+      icon: Heart,
     },
   ];
 
   return (
-    <main>
-      {/* Hero */}
-      <section className="bg-[#F4FAFE] px-6 py-20 lg:px-8 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#318EC9]">
-              News & Stories
-            </p>
+    <section
+      id="news-stories"
+      className="overflow-hidden bg-[#F8FBFE] px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
+    >
+      <div className="mx-auto max-w-7xl">
 
-            <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              What is happening at THEHASA.
-            </h1>
-
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-              Follow the people, milestones and moments behind our work in
-              Kyangwali.
-            </p>
+        {/* Section Header */}
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#318EC9]/10 text-[#318EC9]">
+            <Video size={28} />
           </div>
+
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#318EC9]">
+            News & Stories
+          </span>
+
+          <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+            Real people. Real journeys.{" "}
+            <span className="text-[#318EC9]">Real change.</span>
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-600 sm:text-lg">
+            Go beyond the numbers and hear directly from the people
+            whose journeys are at the heart of THEHASA's work.
+          </p>
         </div>
-      </section>
 
-      {/* Featured story */}
-      <section className="bg-white px-6 py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm lg:grid-cols-2">
-            {/* Image placeholder */}
-            <div className="flex min-h-[380px] items-center justify-center bg-[#318EC9]/5">
-              <div className="text-center">
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-white text-[#318EC9] shadow-sm">
-                  <FiAward />
-                </div>
+        {/* Featured Video */}
+        <div className="mt-14 overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl shadow-gray-900/5">
 
-                <p className="mt-5 font-semibold text-slate-700">
-                  THEHASA Foundation
-                </p>
-
-                <p className="mt-2 text-sm text-slate-400">
-                  Milestone photo coming soon
-                </p>
-              </div>
-            </div>
-
-            {/* Featured content */}
-            <div className="flex flex-col justify-center p-8 lg:p-12">
-              <div className="flex flex-wrap items-center gap-3 text-sm">
-                <span className="rounded-full bg-[#318EC9]/10 px-3 py-1.5 font-semibold text-[#318EC9]">
-                  Milestone
-                </span>
-
-                <span className="flex items-center gap-1.5 text-slate-500">
-                  <FiCalendar />
-                  18 May 2026
-                </span>
+          {/* Video Heading */}
+          <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#318EC9]/10 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-[#318EC9]">
+                <Play size={14} />
+                Featured Story
               </div>
 
-              <h2 className="mt-5 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
-                THEHASA Foundation is incorporated by URSB
-              </h2>
+              <h3 className="mt-4 text-xl font-bold text-gray-900 sm:text-2xl">
+                Stories from the THEHASA Community
+              </h3>
 
-              <p className="mt-5 text-lg leading-8 text-slate-600">
-                The incorporation of THEHASA Foundation by the Uganda
-                Registration Services Bureau marked an important milestone in
-                the Foundation's journey as an independent, women-led
-                organisation serving young people and families in Kyangwali.
+              <p className="mt-2 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base">
+                Watch and listen to the experiences of people whose
+                lives are connected to skills, opportunity and
+                community transformation.
               </p>
-
-              <p className="mt-4 text-base leading-7 text-slate-600">
-                The Foundation was established to connect practical skills,
-                entrepreneurship, childcare and protection through a
-                two-generation model.
-              </p>
-
-              <div className="mt-8">
-                <a
-                  href="/get-involved"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#318EC9] transition-colors hover:text-[#ED1C24]"
-                >
-                  Be part of what comes next
-                  <span className="h-4 w-4">
-                    <FiArrowRight />
-                  </span>
-                </a>
-              </div>
             </div>
           </div>
+
+          {/* Video Player */}
+          <div className="bg-black">
+            {!videoError ? (
+              <video
+                key={`${BASE}videos/success.mp4`}
+                className="block aspect-video w-full bg-black"
+                controls
+                playsInline
+                preload="metadata"
+                poster={`${BASE}images/Graduates.jpg`}
+                aria-label="THEHASA Foundation community success story"
+                onError={() => setVideoError(true)}
+              >
+                <source
+                  src={`${BASE}videos/success.mp4`}
+                  type="video/mp4"
+                />
+
+                Your browser does not support HTML5 video.
+              </video>
+            ) : (
+              <div className="flex aspect-video flex-col items-center justify-center bg-gray-950 px-6 text-center text-white">
+                <Video size={48} className="text-[#318EC9]" />
+
+                <h4 className="mt-5 text-xl font-bold">
+                  Video temporarily unavailable
+                </h4>
+
+                <p className="mt-3 max-w-md text-sm leading-7 text-gray-400">
+                  The video could not be loaded. Please check the
+                  video file and try again.
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* Video Footer */}
+          <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#318EC9]">
+                Community Impact
+              </p>
+
+              <p className="mt-2 text-sm leading-7 text-gray-600">
+                Empowering youth. Protecting children.
+                Transforming communities.
+              </p>
+            </div>
+
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#ED1C24] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-200"
+            >
+              Connect With Us
+              <ArrowRight size={18} />
+            </a>
+          </div>
         </div>
-      </section>
 
-      {/* Story grid */}
-      <section className="bg-slate-50 px-6 py-20 lg:px-8 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#318EC9]">
-              Latest from THEHASA
-            </p>
+        {/* Stories */}
+        <div className="mt-16">
+          <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#318EC9]">
+                Explore
+              </span>
 
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Milestones, learning and people
-            </h2>
+              <h3 className="mt-3 text-2xl font-extrabold text-gray-900 sm:text-3xl">
+                More stories from our community
+              </h3>
+            </div>
 
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              From assessment and certification to enterprise and leadership,
-              these are some of the moments shaping the Foundation's work.
+            <p className="max-w-md text-sm leading-7 text-gray-600">
+              Every journey tells a story of possibility,
+              resilience and transformation.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-            {stories.slice(1).map((story) => {
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {stories.map((story) => {
               const Icon = story.icon;
 
               return (
                 <article
-                  key={story.title}
-                  className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  key={story.number}
+                  className="group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#318EC9]/30 hover:shadow-xl sm:p-8"
                 >
-                  {/* Photo placeholder */}
-                  <div className="flex h-56 items-center justify-center bg-[#318EC9]/5">
-                    <div className="text-center">
-                      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-[#318EC9] shadow-sm">
-                        <Icon size={28} />
-                      </div>
-
-                      <p className="mt-4 text-sm font-medium text-slate-400">
-                        Story photo coming soon
-                      </p>
+                  {/* Card Icon */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#318EC9]/10 text-[#318EC9] transition group-hover:bg-[#318EC9] group-hover:text-white">
+                      <Icon size={24} />
                     </div>
+
+                    <span className="text-sm font-extrabold text-gray-300">
+                      {story.number}
+                    </span>
                   </div>
 
-                  <div className="p-7">
-                    <div className="flex flex-wrap items-center gap-2 text-xs">
-                      <span className="font-bold uppercase tracking-[0.16em] text-[#318EC9]">
-                        {story.category}
-                      </span>
+                  {/* Category */}
+                  <p className="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-[#318EC9]">
+                    {story.category}
+                  </p>
 
-                      <span className="text-slate-400">•</span>
+                  {/* Title */}
+                  <h4 className="mt-3 text-xl font-bold leading-snug text-gray-900">
+                    {story.title}
+                  </h4>
 
-                      <span className="text-slate-500">
-                        {story.date}
-                      </span>
-                    </div>
+                  {/* Description */}
+                  <p className="mt-4 flex-1 text-sm leading-7 text-gray-600">
+                    {story.description}
+                  </p>
 
-                    <h3 className="mt-4 text-xl font-bold leading-snug text-slate-900">
-                      {story.title}
-                    </h3>
-
-                    <p className="mt-4 text-base leading-7 text-slate-600">
-                      {story.description}
-                    </p>
-
+                  {/* Footer */}
+                  <div className="mt-7 border-t border-gray-100 pt-5">
                     <a
-                      href="/get-involved"
-                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#318EC9] transition-colors hover:text-[#ED1C24]"
+                      href="#contact"
+                      className="inline-flex items-center gap-2 text-sm font-bold text-[#318EC9] transition hover:text-[#ED1C24]"
                     >
-                      Get involved
-                      <span className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1">
-                        <FiArrowRight />
-                      </span>
+                      Learn More
+                      <ArrowRight
+                        size={16}
+                        className="transition-transform group-hover:translate-x-1"
+                      />
                     </a>
                   </div>
                 </article>
@@ -248,142 +241,49 @@ function NewsStories() {
             })}
           </div>
         </div>
-      </section>
 
-     {/* Success Stories */}
-<section className="bg-white px-6 py-20 lg:px-8 lg:py-28">
-  <div className="mx-auto max-w-7xl">
-    {/* Section heading */}
-    <div className="mx-auto max-w-3xl text-center">
-      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#318EC9]/10 text-[#318EC9]">
-        <FiVideo className="h-7 w-7" />
-      </div>
+        {/* Bottom CTA */}
+        <div className="mt-16 overflow-hidden rounded-3xl bg-[#318EC9]">
+          <div className="relative px-6 py-12 text-center sm:px-12 sm:py-16">
 
-      <p className="mt-6 text-sm font-semibold uppercase tracking-[0.28em] text-[#318EC9]">
-        Success Stories
-      </p>
+            {/* Decorative Circle */}
+            <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full border-[30px] border-white/5" />
 
-      <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-        Real people. Real journeys. Real change.
-      </h2>
+            <div className="pointer-events-none absolute -bottom-32 -left-20 h-64 w-64 rounded-full border-[30px] border-white/5" />
 
-      <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-        Go beyond the numbers and hear directly from the people whose
-        journeys are at the heart of THEHASA's work.
-      </p>
-    </div>
+            <div className="relative mx-auto max-w-3xl">
+              <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
+                Every story deserves an opportunity.
+              </h3>
 
-    {/* Video cards */}
-    <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {successStories.map((story, index) => (
-        <article
-          key={`${story.title}-${index}`}
-          className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-        >
-          <div className="relative aspect-video overflow-hidden bg-slate-950">
-            <video
-              controls
-              playsInline
-              preload="metadata"
-              poster={story.poster}
-              className="h-full w-full object-cover"
-            >
-              <source src={story.video} type="video/mp4" />
-              Your browser does not support the video element.
-            </video>
-            {/* Story number */}
-            <div className="pointer-events-none absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#318EC9] text-sm font-bold text-white shadow-lg">
-              {String(index + 1).padStart(2, "0")}
-            </div>
-          </div>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/90">
+                Help us create more opportunities for young people,
+                young mothers and children through skills,
+                protection, education and livelihoods.
+              </p>
 
-          {/* Content */}
-          <div className="p-7">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#318EC9]">
-              {story.category}
-            </p>
+              <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+                <a
+                  href="#get-involved"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#ED1C24] px-7 py-4 text-sm font-bold text-white transition hover:bg-red-700"
+                >
+                  Get Involved
+                  <ArrowRight size={18} />
+                </a>
 
-            <h3 className="mt-3 text-xl font-bold leading-snug text-slate-900">
-              {story.title}
-            </h3>
-
-            <p className="mt-4 text-base leading-7 text-slate-600">
-              {story.description}
-            </p>
-
-            <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#318EC9]">
-              <FiPlay className="h-4 w-4" />
-              Watch story
-            </div>
-          </div>
-        </article>
-      ))}
-    </div>
-
-    {/* Bottom message */}
-    <div className="mx-auto mt-14 max-w-4xl rounded-2xl bg-[#F4FAFE] px-6 py-7 text-center sm:px-8">
-      <p className="text-sm leading-7 text-slate-600 sm:text-base">
-        Every story represents a person, a family and a community moving
-        forward through skills, protection and opportunity.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-      {/* Coming stories */}
-      <section className="bg-white px-6 py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-5xl">
-          <div className="rounded-3xl bg-[#318EC9] p-8 text-white sm:p-12">
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 [&>svg]:h-7 [&>svg]:w-7">
-              <FiUsers />
-            </div>
-
-            <h2 className="mt-7 text-3xl font-bold sm:text-4xl">
-              The people behind the progress
-            </h2>
-
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-white/85">
-              We will continue sharing learner stories, training milestones
-              and community moments as the work grows.
-            </p>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-xl bg-white/10 p-5">
-                <p className="font-semibold">Learner stories</p>
-                <p className="mt-2 text-sm text-white/75">
-                  Real experiences from learners and graduates.
-                </p>
-              </div>
-
-              <div className="rounded-xl bg-white/10 p-5">
-                <p className="font-semibold">Training moments</p>
-                <p className="mt-2 text-sm text-white/75">
-                  A look inside practical learning at the Centre.
-                </p>
-              </div>
-
-              <div className="rounded-xl bg-white/10 p-5">
-                <p className="font-semibold">Community milestones</p>
-                <p className="mt-2 text-sm text-white/75">
-                  Progress, partnerships and important moments.
-                </p>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/40 px-7 py-4 text-sm font-bold text-white transition hover:bg-white hover:text-[#318EC9]"
+                >
+                  Contact THEHASA
+                </a>
               </div>
             </div>
-
-            <a
-              href="/get-involved"
-              className="mt-9 inline-flex items-center gap-2 rounded-xl bg-[#ED1C24] px-7 py-4 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-red-600"
-            >
-              Get Involved
-              <span className="h-4 w-4">
-                <FiArrowRight />
-              </span>
-            </a>
           </div>
         </div>
-      </section>
-    </main>
+
+      </div>
+    </section>
   );
 }
 
